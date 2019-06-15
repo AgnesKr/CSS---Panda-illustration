@@ -1,0 +1,397 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #32333B;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+#container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;  
+
+}
+
+.green-background {
+    position: absolute;
+    background-image: radial-gradient(yellow 10%,darkred 80%);
+    width: 75vmin;
+    height: 75vmin;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.panda {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    top: 5vmin;
+    z-index: 2;
+}
+
+.panda .head {
+    position: relative;
+    background-color: white;
+    top: -3vmin;
+    width: 25vmin;
+    height: 22vmin;
+    border-radius: 50% 50% 50% 50%/65% 65% 35% 35%;
+    z-index: 3;
+}
+
+/*** EYES ***/
+
+.panda .head .eyes {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.panda .head .eyes .eye-left {
+    position: relative;
+    background-color: black;
+    left: -2vmin;
+    width: 8vmin;
+    height: 10vmin;
+    border-radius: 50%;
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+    border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+}
+
+.panda .head .eyes .eye-left::before {
+    position: absolute;
+    content: "";
+    top: 4vmin;
+    left: 2.5vmin;
+    width: 5vmin;
+    height: 5vmin;
+    border-radius: 50%;
+    -webkit-box-shadow: inset .2vmin .1vmin 2vmin .2vmin #333, inset .1vmin .1vmin .5vmin 0 #fff;
+    box-shadow: inset .2vmin .1vmin 2vmin .2vmin #333, inset .1vmin .1vmin .5vmin 0 #fff;
+}
+
+.panda .head .eyes .eye-right {
+    position: relative;
+    background-color: black;
+    right: -2vmin;
+    width: 8vmin;
+    height: 10vmin;
+    border-radius: 50%;
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+}
+
+.panda .head .eyes .eye-right::before {
+    position: absolute;
+    content: "";
+    top: 4vmin;
+    right: 2.5vmin;
+    width: 5vmin;
+    height: 5vmin;
+    border-radius: 50%;
+    -webkit-box-shadow: inset -.2vmin .1vmin 2vmin .2vmin #333, inset -.1vmin .1vmin .5vmin 0 #fff;
+    box-shadow: inset -.2vmin .1vmin 2vmin .2vmin #333, inset -.1vmin .1vmin .5vmin 0 #fff;
+}
+
+.panda .head .snout {
+    position: relative;
+    background-color: black;
+    margin: 0 auto;
+    bottom: -16vmin;
+    width: 6vmin;
+    height: 3vmin;
+    border-radius: 50%;
+}
+
+.panda .head .snout .nose {
+    position: relative;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,40%);
+    transform: translate(-50%,40%);
+    width: .25vmin;
+    height: 2vmin;
+}
+
+/*** EARS ***/
+
+.panda .ears {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    bottom: 16vmin;
+}
+
+.panda .ears .ear-left {
+    position: relative;
+    background-color: black;
+    left: -5vmin;
+    width: 8vmin;
+    height: 9vmin;
+    border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+    -webkit-transform: rotate(140deg);
+    transform: rotate(140deg);
+}
+
+.panda .ears .ear-left::before {
+    position: absolute;
+    content: "";
+    left: 1vmin;
+    top: 2vmin;
+    width: 6.5vmin;
+    height: 6.5vmin;
+    border-radius: 50% 50% 50% 50%/60% 60% 45% 45%;
+    -webkit-box-shadow: inset .5vmin -.2vmin 2vmin 0 #333;
+    box-shadow: inset .5vmin -.2vmin 2vmin 0 #333;
+}
+
+.panda .ears .ear-right {
+    position: relative;
+    background-color: black;
+    right: -5vmin;
+    width: 8vmin;
+    height: 9vmin;
+    border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+    -webkit-transform: rotate(-140deg);
+    transform: rotate(-140deg);
+}
+
+.panda .ears .ear-right::before {
+    position: absolute;
+    content: "";
+    right: 1vmin;
+    top: 2vmin;
+    width: 6.5vmin;
+    height: 6.5vmin;
+    border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+    -webkit-box-shadow: inset -.5vmin -.2vmin 2vmin 0 #333;
+    box-shadow: inset -.5vmin -.2vmin 2vmin 0 #333;
+}
+
+/*** BODY ***/
+
+.panda .body {
+    position: absolute;
+    background-image: -webkit-gradient(linear,left top, left bottom,color-stop(68%, black),color-stop(32%, white));
+    background-image: linear-gradient(black 68%,white 32%);
+    top: 10vmin;
+    width: 32vmin;
+    height: 35vmin;
+    border-radius: 50% 50% 50% 50%/60% 60% 35% 35%;
+    /*box-shadow: inset 0 .3vmin 0 .5vmin, inset 0 .3vmin 0vmin 15vmin;*/
+    z-index: -2;
+}
+
+.panda .body::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-35%);
+    transform: translate(-50%,-35%);
+    width: 14vmin;
+    height: 16vmin;
+    border-radius: 50%;
+}
+
+.panda .body .paws-top {
+    position: relative;
+    margin: auto;
+    top: 20vmin;
+    width: 15vmin;
+    height: 15vmin;
+    border-radius: 50%;
+}
+
+.panda .body .paws-top .paw-left {
+    position: absolute;
+    background-color: black;
+    left: -8.5vmin;
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 50%;
+}
+
+.panda .body .paws-top .paw-right {
+    position: absolute;
+    background-color: black;
+    right: -8.5vmin;
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 50%;
+}
+
+.panda .body .paws-bottom {
+    position: relative;
+    background-color: black;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 0;
+}
+
+.panda .body .paws-bottom .paw-left {
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-160%,5%) rotate(150deg);
+    transform: translate(-160%,5%) rotate(150deg);
+    width: 11vmin;
+    height: 17vmin;
+    border-radius: 50% 50% 50% 50%/60% 60% 35% 35%;
+}
+
+.panda .body .paws-bottom .paw-left::before {
+    position: absolute;
+    content: "";
+    background-color: #333;
+    left: 10%;
+    width: 9vmin;
+    height: 15vmin;
+    border-radius: 50% 50% 50% 50%/60% 60% 35% 35%;
+}
+
+.panda .body .paws-bottom .paw-left div {
+    position: relative;
+    background-color: pink;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 1.85vmin;
+    height: 1.85vmin;
+    border-radius: 50%;
+}
+
+.panda .body .paws-bottom .paw-left div:nth-child(1) {
+    top: 3.5vmin;
+    width: 5vmin;
+    height: 4vmin;
+    border-radius: 50% 50% 50% 50%/70% 70% 35% 35%;
+}
+
+.panda .body .paws-bottom .paw-left div:nth-child(2) {
+    top: 7.5vmin;
+    left: 3vmin;
+}
+
+.panda .body .paws-bottom .paw-left div:nth-child(3) {
+    top: 7vmin;
+    left: 5.5vmin;
+}
+
+.panda .body .paws-bottom .paw-left div:nth-child(4) {
+    top: 4vmin;
+    left: 8vmin;
+}
+
+.panda .body .paws-bottom .paw-right {
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(60%,5%) rotate(-150deg);
+    transform: translate(60%,5%) rotate(-150deg);
+    width: 11vmin;
+    height: 17vmin;
+    border-radius: 50% 50% 50% 50%/60% 60% 35% 35%;
+}
+
+.panda .body .paws-bottom .paw-right::before {
+    position: absolute;
+    content: "";
+    background-color: #333;
+    right: 10%;
+    width: 9vmin;
+    height: 15vmin;
+    border-radius: 50% 50% 50% 50%/60% 60% 35% 35%;
+}
+
+.panda .body .paws-bottom .paw-right div {
+    position: relative;
+    background-color: pink;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 1.85vmin;
+    height: 1.85vmin;
+    border-radius: 50%;
+    
+}
+
+.panda .body .paws-bottom .paw-right div:nth-child(1) {
+    top: 3.5vmin;
+    width: 5vmin;
+    height: 4vmin;
+    border-radius: 50% 50% 50% 50%/70% 70% 35% 35%;
+}
+
+.panda .body .paws-bottom .paw-right div:nth-child(2) {
+    top: 7.5vmin;
+    left: 3vmin;
+}
+
+.panda .body .paws-bottom .paw-right div:nth-child(3) {
+    top: 7vmin;
+    left: 5.5vmin;
+}
+
+.panda .body .paws-bottom .paw-right div:nth-child(4) {
+    top: 4vmin;
+    left: 8vmin;
+}
+
